@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <title>Home</title>
+</head>
+
+<body>
+
+  <nav class="bg-transparent text-white border-gray-200 dark:bg-gray-900">
+    <img class="absolute -z-10 h-50 bg-cover object-cover"
+      src="./images/background.jpg"
+      alt="back">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
+      <div class="flex"><button data-collapse-toggle="mega-menu" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="mega-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+        <!-- <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+          
+        </a> -->
+      </div>
+      <div class="relative mt-3 ">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+          <svg class="w-4 h-4 text-gray-100 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 20 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+          </svg>
+        </div>
+        <input type="text" id="search-navbar"
+          class="block bg-transparent w-full p-2 ps-10 text-sm text-gray-100 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 placeholder-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Search...">
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="w-full px-10 flex flex-col items-center gap-y-2 mt-12">
+    <img class="w-30 h-30 p-0 rounded-full ring-4 ring-white dark:ring-gray-500"
+      src="./images/user.jpg" alt="Bordered avatar">
+    <h1 class="text-2xl font-semibold">Dante RD</h1>
+    <button type="button"
+      class="w-full cursor-pointer max-w-100 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      + Follow
+    </button>
+    <button type="button"
+      class="w-full cursor-pointer max-w-100 py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+      Message
+    </button>
+  </div>
+
+  <div class="mb-4 mx-30 border-b border-gray-200 dark:border-gray-700">
+    <ul class="flex -mb-px text-sm font-medium text-center justify-center" id="default-tab"
+      data-tabs-toggle="#default-tab-content" role="tablist">
+      <li class="me-2 cursor-pointer" role="presentation">
+        <button class="inline-block cursor-pointer p-4 border-b-2 rounded-t-lg" id="info-tab" data-tabs-target="#info"
+          type="button" role="tab" aria-controls="info" aria-selected="false">Info</button>
+      </li>
+      <li class="me-2 cursor-pointer" role="presentation">
+        <button
+          class="inline-block cursor-pointer p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+          id="work-tab" data-tabs-target="#work" type="button" role="tab" aria-controls="work"
+          aria-selected="false">Work</button>
+      </li>
+      <li class="me-2 cursor-pointer" role="presentation">
+        <button
+          class="inline-block cursor-pointer p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+          id="appreciations-tab" data-tabs-target="#appreciations" type="button" role="tab"
+          aria-controls="appreciations" aria-selected="false">Appreciations</button>
+      </li>
+    </ul>
+  </div>
+  <div id="default-tab-content">
+
+    <div class="hidden mx-5 md:mx-30 p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="info" role="tabpanel" aria-labelledby="info-tab">
+      <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
+          class="font-medium text-gray-800 dark:text-white">info tab's associated content</strong>. Clicking another
+        tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content
+        visibility and styling.</p>
+    </div>
+
+    <div class="hidden mx-5 md:mx-30 p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="work" role="tabpanel" aria-labelledby="work-tab">
+      <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
+          class="font-medium text-gray-800 dark:text-white">work tab's associated content</strong>. Clicking
+        another
+        tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content
+        visibility and styling.</p>
+    </div>
+
+    <div class="hidden mx-5 md:mx-30 p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="appreciations" role="tabpanel"
+      aria-labelledby="appreciations-tab">
+      <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
+          class="font-medium text-gray-800 dark:text-white">appreciations tab's associated content</strong>. Clicking
+        another
+        tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content
+        visibility and styling.</p>
+    </div>
+
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+
+</html>
